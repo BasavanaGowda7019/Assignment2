@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adopt-A-Pals | Animal Welfare & Pet Adoption</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Adopt-A-Pals is an animal welfare and pet adoption platform helping dogs, cats and other animals find loving homes."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <span class="logo__icon">🐾</span>
+        <span class="logo__text">Adopt-A-Pals</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item">
+            <a href="#featured-pets" class="nav__link">Pets</a>
+          </li>
+          <li class="nav__item">
+            <a href="#how-it-works" class="nav__link">How it works</a>
+          </li>
+          <li class="nav__item">
+            <a href="#volunteer" class="nav__link">Volunteer</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link nav__link--primary">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero__content">
+        <div class="hero__text">
+          <h1 class="hero__title">Find your new best friend.</h1>
+          <p class="hero__subtitle">
+            Adopt-A-Pals connects rescued animals with loving families. Adopt,
+            foster or volunteer and change a life today.
+          </p>
+          <div class="hero__actions">
+            <a href="#featured-pets" class="btn btn--primary">View pets</a>
+            <a href="#how-it-works" class="btn btn--ghost">How adoption works</a>
+          </div>
+          <p class="hero__meta">
+            💛 1,200+ successful adoptions · 🐶 🐱 Dogs & cats · 🩺 Health checked
+          </p>
+        </div>
+        <div class="hero__media" aria-hidden="true">
+          <!-- Replace with real images if you want -->
+          <div class="hero-card hero-card--dog">
+            <div class="hero-card__label">Buddy · 2 yrs · Dog</div>
+          </div>
+          <div class="hero-card hero-card--cat">
+            <div class="hero-card__label">Luna · 1 yr · Cat</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container section__inner section__inner--split">
+        <div>
+          <h2 class="section__title">Who we are</h2>
+          <p class="section__text">
+            Adopt-A-Pals is a non-profit animal welfare organization focused on
+            rescuing, rehabilitating and rehoming abandoned animals. Every pet
+            that enters our center receives medical care, vaccinations and a
+            behavior assessment before being matched with a family.
+          </p>
+          <div class="stats">
+            <div class="stats__item">
+              <span class="stats__number">1200+</span>
+              <span class="stats__label">Adoptions</span>
+            </div>
+            <div class="stats__item">
+              <span class="stats__number">150+</span>
+              <span class="stats__label">Active volunteers</span>
+            </div>
+            <div class="stats__item">
+              <span class="stats__number">2018</span>
+              <span class="stats__label">Founded</span>
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+          <h3 class="info-card__title">What we do</h3>
+          <ul class="info-card__list">
+            <li>Rescue & medical care for injured or abandoned animals.</li>
+            <li>Pet adoption & foster placement programs.</li>
+            <li>Vaccination, microchipping & sterilization drives.</li>
+            <li>Community education on responsible pet care.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Pets -->
+    <section id="featured-pets" class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Meet our pals</h2>
+          <p class="section__text">
+            A small selection of animals currently looking for homes. Visit the
+            shelter or contact us to see more.
+          </p>
+        </div>
+
+        <div class="filter-bar" aria-label="Filter pets">
+          <button class="filter-btn filter-btn--active" data-filter="all">
+            All
+          </button>
+          <button class="filter-btn" data-filter="dog">Dogs</button>
+          <button class="filter-btn" data-filter="cat">Cats</button>
+          <button class="filter-btn" data-filter="other">Others</button>
+        </div>
+
+        <div class="pet-grid" aria-live="polite">
+          <!-- Pet card -->
+          <article class="pet-card" data-type="dog">
+            <div class="pet-card__image pet-card__image--dog" role="img"
+              aria-label="Brown dog looking at the camera"></div>
+            <div class="pet-card__body">
+              <h3 class="pet-card__name">Buddy</h3>
+              <p class="pet-card__meta">Dog · 2 years · Male</p>
+              <p class="pet-card__tags">
+                <span class="tag">Vaccinated</span>
+                <span class="tag">House trained</span>
+              </p>
+              <p class="pet-card__desc">
+                A playful and loyal companion who loves walks and belly rubs.
+              </p>
+              <button class="btn btn--secondary js-open-adopt-modal"
+                data-pet="Buddy">
+                I'm interested
+              </button>
+            </div>
+          </article>
+
+          <article class="pet-card" data-type="cat">
+            <div class="pet-card__image pet-card__image--cat" role="img"
+              aria-label="Gray cat relaxing on a cushion"></div>
+            <div class="pet-card__body">
+              <h3 class="pet-card__name">Luna</h3>
+              <p class="pet-card__meta">Cat · 1 year · Female</p>
+              <p class="pet-card__tags">
+                <span class="tag">Spayed</span>
+                <span class="tag">Indoor</span>
+              </p>
+              <p class="pet-card__desc">
+                Gentle and cuddly, perfect for a calm home with lots of love.
+              </p>
+              <button class="btn btn--secondary js-open-adopt-modal"
+                data-pet="Luna">
+                I'm interested
+              </button>
+            </div>
+          </article>
+
+          <article class="pet-card" data-type="dog">
+            <div class="pet-card__image pet-card__image--puppy" role="img"
+              aria-label="Happy puppy on grass"></div>
+            <div class="pet-card__body">
+              <h3 class="pet-card__name">Cocoa</h3>
+              <p class="pet-card__meta">Puppy · 6 months · Female</p>
+              <p class="pet-card__tags">
+                <span class="tag">Good with kids</span>
+              </p>
+              <p class="pet-card__desc">
+                Curious and energetic, ideal for an active family home.
+              </p>
+              <button class="btn btn--secondary js-open-adopt-modal"
+                data-pet="Cocoa">
+                I'm interested
+              </button>
+            </div>
+          </article>
+
+          <article class="pet-card" data-type="other">
+            <div class="pet-card__image pet-card__image--other" role="img"
+              aria-label="Rabbit sitting on hay"></div>
+            <div class="pet-card__body">
+              <h3 class="pet-card__name">Pip</h3>
+              <p class="pet-card__meta">Rabbit · 8 months · Male</p>
+              <p class="pet-card__tags">
+                <span class="tag">Litter trained</span>
+              </p>
+              <p class="pet-card__desc">
+                A quiet and adorable rabbit who loves gentle handling.
+              </p>
+              <button class="btn btn--secondary js-open-adopt-modal"
+                data-pet="Pip">
+                I'm interested
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">How adoption works</h2>
+          <p class="section__text">
+            A simple and transparent process centered around the wellbeing of
+            the animal and your family.
+          </p>
+        </div>
+
+        <ol class="steps">
+          <li class="steps__item">
+            <h3 class="steps__title">1. Browse & enquire</h3>
+            <p class="steps__text">
+              Explore available pets online or visit the shelter. Submit an
+              interest form for the animals you connect with.
+            </p>
+          </li>
+          <li class="steps__item">
+            <h3 class="steps__title">2. Meet & match</h3>
+            <p class="steps__text">
+              Our team arranges a meet-and-greet and helps check compatibility
+              with your lifestyle and home.
+            </p>
+          </li>
+          <li class="steps__item">
+            <h3 class="steps__title">3. Home check & paperwork</h3>
+            <p class="steps__text">
+              We conduct a quick home check, complete the legal paperwork and
+              share medical records and care instructions.
+            </p>
+          </li>
+          <li class="steps__item">
+            <h3 class="steps__title">4. Welcome home!</h3>
+            <p class="steps__text">
+              Your new pal comes home. Our team supports you with post-adoption
+              guidance whenever needed.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Volunteer -->
+    <section id="volunteer" class="section section--alt">
+      <div class="container section__inner section__inner--split">
+        <div>
+          <h2 class="section__title">Volunteer with us</h2>
+          <p class="section__text">
+            Volunteers help with feeding, walking, enrichment, events, transport
+            and social media. Even a few hours a month makes a difference.
+          </p>
+          <ul class="info-card__list">
+            <li>On-site animal care (feeding, cleaning, enrichment).</li>
+            <li>Photography & social media for adoption drives.</li>
+            <li>Fundraising and community outreach.</li>
+          </ul>
+        </div>
+
+        <form class="form" aria-label="Volunteer registration form">
+          <div class="form__group">
+            <label for="vol-name">Full name</label>
+            <input
+              id="vol-name"
+              name="vol-name"
+              type="text"
+              required
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div class="form__group">
+            <label for="vol-email">Email</label>
+            <input
+              id="vol-email"
+              name="vol-email"
+              type="email"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="form__group">
+            <label for="vol-role">Preferred role</label>
+            <select id="vol-role" name="vol-role" required>
+              <option value="">Select a role</option>
+              <option value="animal-care">Animal care</option>
+              <option value="events">Events & adoption drives</option>
+              <option value="media">Photography & social media</option>
+              <option value="fundraising">Fundraising</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="vol-message">Tell us about your experience (optional)</label>
+            <textarea
+              id="vol-message"
+              name="vol-message"
+              rows="3"
+              placeholder="Share any experience with animals or volunteering."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            Sign up as volunteer
+          </button>
+          <p class="form__hint">
+            This is a demo frontend. In production, this form would send data to
+            our secure backend.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container section__inner section__inner--split">
+        <div>
+          <h2 class="section__title">Visit or contact us</h2>
+          <p class="section__text">
+            Reach out for adoption enquiries, volunteering, donations or
+            partnerships. We typically respond within 24–48 hours.
+          </p>
+          <div class="contact-info">
+            <div class="contact-info__item">
+              <h3>Location</h3>
+              <p>
+                Adopt-A-Pals Animal Welfare Center<br />
+                Green Street, Pawtown, 123456
+              </p>
+            </div>
+            <div class="contact-info__item">
+              <h3>Email</h3>
+              <p><a href="mailto:hello@adopt-a-pals.org">hello@adopt-a-pals.org</a></p>
+            </div>
+            <div class="contact-info__item">
+              <h3>Phone</h3>
+              <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+            </div>
+            <div class="contact-info__item">
+              <h3>Timings</h3>
+              <p>Mon – Sun, 10:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="form" aria-label="Contact form">
+          <div class="form__group">
+            <label for="contact-name">Full name</label>
+            <input
+              id="contact-name"
+              name="contact-name"
+              type="text"
+              required
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div class="form__group">
+            <label for="contact-email">Email</label>
+            <input
+              id="contact-email"
+              name="contact-email"
+              type="email"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="form__group">
+            <label for="contact-subject">Subject</label>
+            <input
+              id="contact-subject"
+              name="contact-subject"
+              type="text"
+              placeholder="Adoption / Volunteering / Donation"
+            />
+          </div>
+          <div class="form__group">
+            <label for="contact-message">Message</label>
+            <textarea
+              id="contact-message"
+              name="contact-message"
+              rows="4"
+              required
+              placeholder="Share how we can help."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            Send message
+          </button>
+          <p class="form__hint">
+            This is a demo frontend. Connect it to your backend (Node, PHP,
+            etc.) to handle submissions.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">
+        &copy; <span id="year"></span> Adopt-A-Pals. All rights reserved.
+      </p>
+      <p class="footer__meta">
+        Built with care for animals ·
+        <a href="#about">About</a> ·
+        <a href="#featured-pets">Adopt</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Simple modal for "I'm interested" CTA -->
+  <div
+    class="modal"
+    id="adopt-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="adopt-modal-title"
+    aria-hidden="true"
+  >
+    <div class="modal__backdrop js-close-modal"></div>
+    <div class="modal__dialog">
+      <button class="modal__close js-close-modal" aria-label="Close modal">
+        ×
+      </button>
+      <h2 id="adopt-modal-title">Interested in adopting <span id="modal-pet-name">this pal</span>?</h2>
+      <p>
+        This is a frontend demo. In a real application, this would open a full adoption form
+        pre-filled with the selected pet details and send it to the backend.
+      </p>
+      <button class="btn btn--primary js-close-modal">Okay, got it</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
